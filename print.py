@@ -25,7 +25,7 @@ def calc_year(who,today):
     return nextBirthday
 
 def get_quote():
-    file = open('quotes.txt')
+    file = open('/home/pi/Desktop/print/home_printer/quotes.txt')
     quotes = file.read()
     number = 360
     count = 0
@@ -136,6 +136,6 @@ printer_name=printers.keys()[0]
 
 cups.setUser('pi')
 
-conn.printFile(printer_name,'today.txt',"Daily Print",{})
+conn.printFile(printer_name,'/home/pi/Desktop/print/home_printer/today.txt',"Daily Print",{})
 
 #sp.call(['notepad','/p', 'today'])
