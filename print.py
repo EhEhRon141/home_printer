@@ -132,13 +132,10 @@ f.close()
 
 conn = cups.Connection()
 printers = conn.getPrinters()
-for printer in printers:
-    print printer, printers[printer]["device-uri"]
-
 printer_name=printers.keys()[0]
 
 cups.setUser('pi')
 
-conn.printFile(printer_name,'today.txt',"Daily Print",{}) 
+conn.printFile(printer_name,'today.txt',"Daily Print",{})
 
 #sp.call(['notepad','/p', 'today'])
