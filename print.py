@@ -130,6 +130,12 @@ f.write("Pokemon of the day is:\n%s\n\n" %pokeStats)
 
 f.close()
 
-printFile(EPSON_EPSON_ET-3710_Series,'today.txt',"Daily Print",{}) 
+conn = cups.Connection()
+printers = conn.getPrinters()
+for printer in printers:
+    print printer, printers[printer]["device-uri"]
+
+printer_name=printers.keys()[0]
+printFile(printer_name,'today.txt',"Daily Print",{}) 
 
 #sp.call(['notepad','/p', 'today'])
