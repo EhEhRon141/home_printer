@@ -133,6 +133,6 @@ f.close()
 conn = cups.Connection()
 printers = conn.getPrinters ()
 for printer in printers:
-print printer, printers[printer]["device-uri"]
+    print(printer, printers[printer]["device-uri"])
 
-#sp.call(['notepad','/p', 'today']) 
+#sp.call(['notepad','/p', 'today'])
