@@ -25,7 +25,7 @@ def calc_year(who,today):
     return nextBirthday
 
 def get_quote():
-    file = open('quotes.txt',encoding="utf8")
+    file = open('quotes.txt')
     quotes = file.read()
     number = 360
     count = 0
