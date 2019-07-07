@@ -130,9 +130,6 @@ f.write("Pokemon of the day is:\n%s\n\n" %pokeStats)
 
 f.close()
 
-conn = cups.Connection()
-printers = conn.getPrinters ()
-for printer in printers:
-    print(printer, printers[printer]["device-uri"])
+printFile(dnssd://EPSON%20ET-3710%20Series._ipp._tcp.local/?uuid=cfe92100-67c4-11d4-a45f-f8d0273e84ac,'today.txt',"Daily Print",{})
 
 #sp.call(['notepad','/p', 'today'])
