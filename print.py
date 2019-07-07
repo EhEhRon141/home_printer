@@ -5,6 +5,7 @@ import requests
 import json
 import os
 import tempfile
+import cups
 #import win32api
 #import win32print
 
@@ -31,7 +32,7 @@ def get_quote():
     start = 0
     end = 0
     howmany = 0
-    todaysQuote = random.randint(1,number) 
+    todaysQuote = random.randint(1,number)
     for i in quotes:
         if(i == "-" and c == "-"):
             howmany += 1
@@ -129,4 +130,9 @@ f.write("Pokemon of the day is:\n%s\n\n" %pokeStats)
 
 f.close()
 
-sp.call(['notepad','/p', 'today'])
+conn = cups.Connection()
+printers = conn.getPrinters ()
+for printer in printers:
+print printer, printers[printer]["device-uri"]
+
+#sp.call(['notepad','/p', 'today'])
