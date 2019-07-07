@@ -31,7 +31,7 @@ def get_quote():
     start = 0
     end = 0
     howmany = 0
-    todaysQuote = random.randint(1,number)
+    todaysQuote = random.randint(1,number) 
     for i in quotes:
         if(i == "-" and c == "-"):
             howmany += 1
