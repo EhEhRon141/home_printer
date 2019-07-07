@@ -136,6 +136,9 @@ for printer in printers:
     print printer, printers[printer]["device-uri"]
 
 printer_name=printers.keys()[0]
-printFile(printer_name,'today.txt',"Daily Print",{}) 
+
+cups.setUser('pi')
+
+conn.printFile(printer_name,'today.txt',"Daily Print",{}) 
 
 #sp.call(['notepad','/p', 'today'])
