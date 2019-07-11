@@ -130,7 +130,7 @@ pokemon = get_pokemon()
 pokeStats = poke_info(pokemon)
 
 #Prints all of the things to a text file
-f = open('today.txt','w+')
+f = open('/home/pi/Desktop/print/home_printer/today.txt','w+')
 
 f.write("Christmas is %s days away!\n" %christmas.days)
 f.write("Emily's Birthday is %s days away!\n" %emily.days)
